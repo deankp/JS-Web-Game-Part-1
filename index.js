@@ -10,6 +10,10 @@ function newImage (url, left, bottom){
 
 function newItem (url, left, bottom){
     let object = newImage (url, left, bottom)
+
+    object.addEventListener( 'dblclick', function(){
+        object.remove()
+    })
 }
 
 newImage ('assets/pine-tree.png', 450, 200)
@@ -22,7 +26,3 @@ newImage ('assets/well.png', 500, 425)
 newItem ('assets/sword.png', 500, 405)
 newItem ('assets/shield.png', 165, 185)
 newItem ('assets/staff.png', 600, 100)
-
-object.addEventListener('click', function(){
-    object.remove()
-})
